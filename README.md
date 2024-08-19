@@ -1,8 +1,5 @@
 ##### WCCRM PH EVENT PAGE
 
-Based on the outline provided for the "5-Day Revival Crusade" website, here is a standard README file that you can use:
-
----
 
 # 5-Day Revival Crusade Website
 
