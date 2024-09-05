@@ -47,7 +47,108 @@
             
 
 
-
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .banner {
+        background-color: #4a90e2; /* Light blue background */
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    }
+    
+    .banner-content {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .line {
+        display: inline-block;
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin-right: 10px;
+    }
+    
+    h2, .verse {
+        color: white; /* Makes the text white */
+    }
+    
+    h2 {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    
+    .verse {
+        font-weight: normal;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    
+    .banner-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap; /* Wrap buttons on smaller screens */
+        justify-content: flex-end;
+    }
+    
+    .btn {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+        background-color: #e0e0e0;
+    }
+    
+    /* Media query for screens smaller than 768px */
+    @media (max-width: 768px) {
+        .banner {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+    
+        .banner-content {
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    
+        .h2 {
+            font-size: 20px;
+        }
+    
+        .banner-buttons {
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .btn {
+            width: 100%; /* Full width buttons on smaller screens */
+            padding: 12px;
+        }
+    }
+    
+    
+</style>
 
 
 
@@ -869,6 +970,30 @@
         </div>
     </section> -->
 
+    
+    <section class="banner">
+        <div class="banner-content">
+            <h2>
+                <span class="line"></span> 
+                DON'T GIVE UP! 
+                <span class="verse">...God is in this place (Genesis 28:16)</span>
+            </h2>
+        </div>
+        <div class="banner-buttons">
+            <a href="./testimonies.html">
+            <button class="btn">View Testimonies</button>
+        </a>
+        <a href="./share-testimony/share-testimony.html">
+            <button class="btn">Share Your Testimony</button>
+        </a>
+        <a href="./prayer-request/prayer-request.html">
+            <button class="btn">Prayer Requests</button>
+        </a>
+        </div>
+    </section>
+    
+    <br>
+
     <!--? Brand Area Start-->
     <section class="work-company section-padding30" style="background: #2e0e8c;">
         <div class="container">
@@ -911,6 +1036,10 @@
             </div>
         </div>
     </section>
+
+
+    
+    
     <!-- Brand Area End-->
     <!--? Blog Area Start -->
    <!--<section class="home-blog-area section-padding">
