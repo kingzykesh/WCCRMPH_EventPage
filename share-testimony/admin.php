@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 </head>
 <body class="bg-gray-100">
     <div class="max-w-5xl mx-auto p-8">
-        <h1 class="text-center text-4xl font-bold mb-4">Submitted Prayer Requests</h1>
+        <h1 class="text-center text-4xl font-bold mb-4">TESTIMONY SUBMISSION</h1>
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr class="border-b">
