@@ -1,9 +1,9 @@
 <?php
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = ""; // Your MySQL password
-$dbname = "church_db"; // Name of your database
+$servername = "sdb-58.hosting.stackcp.net";
+$username = "share-testimony-353031377e89";
+$password = "qgzyp2h66a"; // Your MySQL password
+$dbname = "share-testimony-353031377e89"; // Name of your database
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
