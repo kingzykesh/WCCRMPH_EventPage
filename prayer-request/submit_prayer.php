@@ -25,7 +25,11 @@ $sql = "INSERT INTO prayer_requests (name, parish, district, phone, request)
         VALUES ('$name', '$parish', '$district', '$phone', '$request')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Prayer request submitted successfully!";
+    // If successful, display the popup message and redirect
+    echo "<script>
+            alert('YOUR PRAYER REQUEST HAS BEEN RECEIVED');
+            window.location.href = 'https://wccrmportharcourt.com/'; 
+          </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
