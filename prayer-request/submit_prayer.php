@@ -28,7 +28,7 @@ if ($conn->query($sql) === TRUE) {
     // If successful, display the popup message and redirect
     echo "<script>
             alert('YOUR PRAYER REQUEST HAS BEEN RECEIVED');
-            window.location.href = 'https://example.com'; // Replace with the URL you want to redirect to
+            window.location.href = 'https://wccrmportharcourt.com/'; 
           </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
