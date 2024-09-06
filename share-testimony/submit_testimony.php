@@ -27,7 +27,7 @@ $sql = "INSERT INTO testimonies (name, parish, district, phone, request)
 if ($conn->query($sql) === TRUE) {
     // If successful, display the popup message and redirect
     echo "<script>
-            alert('YOU Have Successfully Shared your Testimony');
+            alert('You Have Successfully Shared your Testimony');
             window.location.href = 'https://wccrmportharcourt.com/'; 
           </script>";
 } else {
