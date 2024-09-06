@@ -45,6 +45,21 @@ $posts = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </header>
+    <br>
+    <section class="max-w-7xl mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-md">
+            <img src="img/featured-image.png" alt="Featured" class="w-full h-64 object-cover rounded-t-lg">
+            <div class="p-6">
+                <span class="text-blue-600 uppercase text-sm">WCCRMPH</span>
+                <h2 class="mt-2 text-3xl font-bold">Soaring through Reading and Engagements.</h2>
+                <div class="flex items-center mt-4">
+                    <span class="text-gray-600 text-sm">By: WCCRMPH</span>
+                    <span class="text-gray-600 mx-2">•</span>
+                    <span id="currentDate" class="text-gray-600 text-sm"></span>
+                </div>
+            </div>
+        </div>
+    </section><br> <br>
     <section class="max-w-7xl mx-auto p-6">
         <h3 class="text-2xl font-bold mb-6">Latest Posts</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -123,6 +138,27 @@ $posts = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
           </div>
         </div>
       </footer>
+      
+      <script>
+    // Function to format the date in "MONTH DAY, YEAR" format
+    function formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('en-US', options).format(date);
+    }
+
+    // Function to get the current date in Nigeria's time zone
+    function getNigeriaDate() {
+        // Nigeria is in the WAT time zone (UTC+1)
+        const nigeriaTimeOffset = 1; // WAT is UTC+1
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 6000);
+        const nigeriaDate = new Date(utc + (3600000 * nigeriaTimeOffset));
+        return nigeriaDate;
+    }
+
+    // Display the current date in Nigeria's time zone
+    document.getElementById('currentDate').textContent = formatDate(getNigeriaDate());
+</script>
 
 </body>
 </html>

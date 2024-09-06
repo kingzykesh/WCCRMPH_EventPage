@@ -13,6 +13,8 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <!-- Include Tailwind CSS here -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-1234567890123456"></script>
+
 </head>
 <body>
         <!-- Header -->
@@ -48,6 +50,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </header>
+    <br> <br>
     <section class="max-w-4xl mx-auto p-6">
         <article class="bg-white rounded-lg shadow-md">
             <img src="uploads/<?= $post['image'] ?>" alt="<?= $post['title'] ?>" class="w-full h-64 object-cover rounded-t-lg">
@@ -64,6 +67,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
                 </div>
             </div>
         </article>
+        <div class="addthis_inline_share_toolbox"></div>
     </section>
     <footer class="bg-[#0A011E] text-white py-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
