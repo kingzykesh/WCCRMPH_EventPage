@@ -62,11 +62,13 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
                     <span class="text-gray-600 mx-2">•</span>
                     <span class="text-gray-600 text-sm"><?= $post['date'] ?></span>
                 </div>
+                <img src="uploads/<?= $post['image'] ?>" alt="<?= $post['title'] ?>" class="w-full rounded-lg">
                 <div class="mt-6 text-gray-700 leading-loose">
                     <p><?= $post['content'] ?></p>
                 </div>
             </div>
             <div class="sharethis-inline-share-buttons"></div>
+            <br>
         </article>
     </section>
     <footer class="bg-[#0A011E] text-white py-8">
