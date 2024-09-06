@@ -13,7 +13,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <!-- Include Tailwind CSS here -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-1234567890123456"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=66db7e7cbb2e4200191ddcb2&product=inline-share-buttons&source=platform" async="async"></script>
 
 </head>
 <body>
@@ -66,8 +66,8 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
                     <p><?= $post['content'] ?></p>
                 </div>
             </div>
+            <div class="sharethis-inline-share-buttons"></div>
         </article>
-        <div class="addthis_inline_share_toolbox"></div>
     </section>
     <footer class="bg-[#0A011E] text-white py-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
