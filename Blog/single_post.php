@@ -12,6 +12,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
 <html lang="en">
 <head>
     <!-- Include Tailwind CSS here -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <section class="max-w-4xl mx-auto p-6">
