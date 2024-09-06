@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$db = 'blog';
-$user = 'root';
-$pass = '';
+$host = 'sdb-66.hosting.stackcp.net';
+$db = 'blog_db-353034314233';
+$user = 'blog_db-353034314233';
+$pass = 'mg3t6ghldb';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
