@@ -2747,17 +2747,21 @@ hr {
 }
 
 .slider-area2 {
-	background-image: url(../img/hero/hero2.png);
+	background-image: url(../img/hero/flyer.png);
 	background-repeat: no-repeat;
-	background-size: cover
+	background-size: cover;
+	width: 100%;
+    height: 100vh;
 }
 
 .slider-area {
 	margin-top: -1px;
-	background-image: url(../img/hero/hero.png);
+	background-image: url(../img/hero/flyer.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover
+	width: 100%;
+    height: 100vh;
 }
 
 .slider-area .hero__caption {
