@@ -48,7 +48,7 @@ $posts = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     <br>
     <section class="max-w-7xl mx-auto p-6">
         <div class="bg-white rounded-lg shadow-md">
-            <img src="img/featured-image.png" alt="Featured" class="w-full h-64 object-cover rounded-t-lg">
+            <img src="/assets/img/home.png" alt="Featured" class="w-full h-64 object-cover rounded-t-lg">
             <div class="p-6">
                 <span class="text-blue-600 uppercase text-sm">WCCRMPH</span>
                 <h2 class="mt-2 text-3xl font-bold">Soaring through Reading and Engagements.</h2>

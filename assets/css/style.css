@@ -2747,7 +2747,7 @@ hr {
 }
 
 .slider-area2 {
-	background-image: url(../img/hero/flyer.png);
+	background-image: url(../img/hero/hero.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -2756,7 +2756,7 @@ hr {
 
 .slider-area {
 	margin-top: -1px;
-	background-image: url(../img/hero/flyer.png);
+	background-image: url(../img/hero/hero.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover
