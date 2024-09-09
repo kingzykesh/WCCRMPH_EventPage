@@ -42,8 +42,36 @@
 
   gtag('config', 'G-Y1335ZFW1S');
 </script>
-            
-
+      
+<!--countdonw-->
+<style>
+    .scrolling-countdown {
+        background-color: black; /* Black background */
+        color: white; /* Countdown text color */
+        padding: 10px 0;
+        position: absolute; /* To make it above the navbar */
+        width: 100%;
+        top: 0;
+        z-index: 9999; /* Ensures it stays above the navbar */
+      }
+      
+      .tickcounter {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: scroll-left 10s linear infinite;
+      }
+      
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
+</style>
 
 <style>
     * {
@@ -300,7 +328,22 @@
             <button class="btn" onclick="closeModal()">GIVE NOW</button>
         </div>
     </div>---> 
-    
+    <div class="scrolling-countdown">
+        <script>
+          (function(d, s, id) { 
+            var js, pjs = d.getElementsByTagName(s)[0]; 
+            if (d.getElementById(id)) return; 
+            js = d.createElement(s); js.id = id; 
+            js.src = "//www.tickcounter.com/static/js/loader.js"; 
+            pjs.parentNode.insertBefore(js, pjs); 
+          }(document, "script", "tickcounter-sdk"));
+        </script>
+        <a data-type="countdown" data-id="5775054" class="tickcounter" 
+           style="display:block; left:0; width:100%; height:0; position:relative; 
+                  padding-bottom:25%; margin:0 auto;" title="CRUSADE" 
+           href="//www.tickcounter.com/">CRUSADE</a>
+      </div>
+      
 <header>
     <!--? Header Start -->
     <div class="header-area">
@@ -370,8 +413,8 @@
                                 <div class="slider-btns">
                                     <a data-animation="fadeInLeft" data-delay="1.0s" href="https://www.youtube.com/watch?v=FiOmKsXWiUM" class="btn hero-btn">Watch Previous</a>
                                     <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="https://www.youtube.com/watch?v=FiOmKsXWiUM">
-                                        <i class="fas fa-play"></i></a>
-                                    <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Story Vidoe<br> Watch</p>
+                                        <i class="fas fa-play"></i></a> <br>
+                                    <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Youtube Video<br> Watch</p>  <br>
                                 </div>
                             </div>
                         </div>
@@ -422,6 +465,7 @@
         </div>
         <!-- Counter Section End -->
     </div>
+    <br>
     <!-- slider Area End-->
     <!--? About Law Start-->
     <section class="about-low-area section-padding2">
@@ -1012,6 +1056,7 @@
                     <div class="section-tittle section-tittle2 mb-50">
                         <h2>WCCRMPH Social Media Platforms.</h2>
                         <p>Be Part of those that Share The Gospel From Our Various Social Media Platforms. You should help carry the gospel to Mum, Dad, Friends, Classmates, Fellows, Colleagues, e.t.c Click any of the Social Media Cards, to engage in any of the Social Media handles and don't forget to share Our Contents.</p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -1268,7 +1313,7 @@
     <!-- counter , waypoint -->
     <script src="./assets/js/jquery.counterup.min.js"></script>
     <script src="./assets/js/waypoints.min.js"></script>
-    <script src="./assets/js/jquery.countdown.min.js"></script>
+   
     <!-- contact js -->
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
