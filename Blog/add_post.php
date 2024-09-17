@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $author = $_POST['author'];
     $date = $_POST['date'];
     
-    // Handle Image Upload
+    // Here it Handle Image Upload🙂
     if (isset($_FILES['postImage']) && $_FILES['postImage']['error'] === 0) {
         $imageName = time() . '_' . $_FILES['postImage']['name'];
         move_uploaded_file($_FILES['postImage']['tmp_name'], 'uploads/' . $imageName);
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $imageName = 'default.jpg';
     }
 
-    // Insert into Database
+    // Here it will Insert into Database
     $sql = "INSERT INTO posts (title, topic, content, author, date, image) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$title, $topic, $content, $author, $date, $imageName]);
