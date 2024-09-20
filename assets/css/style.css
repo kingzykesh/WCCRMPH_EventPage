@@ -3242,7 +3242,7 @@ hr {
 }
 
 .accordion .accordion-wrapper {
-	background: #fff;
+	color: #fff;
 	padding: 22px 40px 45px 20px
 }
 
@@ -3464,6 +3464,10 @@ hr {
 
 .about-low-area {
 	position: relative
+}
+.about .about-wrapper {
+	background-image: url(../img/hero/hero.png);
+	padding: 22px 40px 45px 20px
 }
 
 .about-low-area .about-caption p {
