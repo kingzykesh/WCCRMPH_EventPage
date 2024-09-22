@@ -452,18 +452,33 @@
             </div>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="swiper-slide relative">
-            <img src="assets/img/hero/heroo.jpg" class="w-full h-full object-cover" alt="Background Image">
-            <div class="absolute inset-0 bg-purple-900 bg-opacity-50 flex items-center justify-center text-center">
-                <div class="text-white px-4 md:px-0">
-                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold slide-in-left text-white">ARE YOU READY</h1>
-                    <p class="mt-4 text-base md:text-lg lg:text-xl slide-in-left text-white">GREAT ENCOUNTERS</p>
-                    <a href="https://wccrmportharcourt.com/prayer-request" class="inline-block mt-6 bg-purple-600 px-6 py-3 text-sm md:text-lg font-medium rounded-full hover:bg-purple-800 transition slide-in-left">Prayer Request</a>
-                </div>
-            </div>
+ <!-- Slide 3 --> 
+<div class="swiper-slide relative">
+    <video id="slide3Video" autoplay playsinline class="w-full h-full object-cover">
+        <source src="assets/vid/hero1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-purple-900 bg-opacity-50 flex items-center justify-center text-center">
+        <div class="text-white px-4 md:px-0">
+           
+            <a href="https://wccrmportharcourt.com/prayer-request" class="inline-block mt-6 bg-purple-600 px-6 py-3 text-sm md:text-lg font-medium rounded-full hover:bg-purple-800 transition slide-in-left">Prayer Request</a>
         </div>
+    </div>
+</div>
 
+<script>
+    // Ensure the video plays with audio and return to first slide after it ends
+    const video = document.getElementById('slide3Video');
+    
+    video.addEventListener('ended', () => {
+        // When video ends, move back to the first slide
+        const swiper = document.querySelector('.swiper-container').swiper;
+        swiper.slideTo(0);  // Swiper method to go back to the first slide
+    });
+</script>
+
+
+      
        <!-- <div class="swiper-slide relative bg-cover bg-center bg-no-repeat">
              Button container 
             <div class="button-container absolute inset-y-0 left-0 flex items-center justify-start pl-10 lg:pl-20 text-white">
@@ -509,10 +524,10 @@
                     <p class="mb-4 text-white"> 
                         ✴️🔥 Experience the life-changing power of God as miracles unfold before your eyes. <br>
                         ✼ Don't miss this incredible opportunity to encounter His love and grace.
-                    </p>2
+                    </p>
                     <p class="mb-4 text-white">#Miracles #Salvation #5DaysRevival #Watchman #PortHarcourt #DivineEncounter</p>
                     <p class="mb-4 text-white"><strong>Where:</strong> Community Secondary School, Woji PH <br> <strong>When:</strong> Oct. 9th 2024</p>
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">Share to Friends</button>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"><a href="https://wccrmportharcourt.com/personalized-dp/">Share to Friends</a></button>
                 </div>
     
                 <!-- Right Side: Image Content -->
@@ -559,13 +574,13 @@
     
     <!--TAILWIND CSS-->
     <!--? About Law Start-->
-    <section class="about-low-area section-padding2">
+   <!-- <section class="about-low-area section-padding2">
         <div class="about-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-caption mb-50">
-                        <!-- Section Tittle -->
+                        <!-- Section Tittle 
                         <div class="section-tittle mb-35">
                             <h2>The 5 Days Revival Crusade</h2>
                         </div>
@@ -609,10 +624,10 @@
                     <a href="https://api.whatsapp.com/send?text=YOU%20ARE%20INVITED%20TO%20THE%205%20DAYS%20REVIVAL%20CRUSADE%20https%3A%2F%2Fhttps://wccrmportharcourt.com/%20" class="btn mt-50" target="_blank">Share to Friends</a>
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <!-- about-img -->
+                    <!-- about-img 
                     <div class="about-img">
                         <div class="about-font-img d-none d-lg-block">
-                            <!--   <img src="assets/img/gallery/flyer.jpg" alt=""> -->
+                            <!--   <img src="assets/img/gallery/flyer.jpg" alt=""> 
                         </div>
                         <div class="about-back-img">
                             <img src="assets/img/gallery/flyer.jpg" alt="">
@@ -620,9 +635,10 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section>-->
     <!-- About Law End-->
     <!--? Brand Area Start -->
+    <br>
     <section class="team-area pt-180 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.png">
         <div class="container">
             <div class="row">
