@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crusade Seat Reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/css/slicknav.css">
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/gijgo.css">
+	<link rel="stylesheet" href="/assets/css/animate.min.css">
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="/assets/css/themify-icons.css">
+	<link rel="stylesheet" href="/assets/css/slick.css">
+	<link rel="stylesheet" href="/assets/css/nice-select.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="bg-gray-100">
+  
+  <header class="bg-blue-800 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-2xl font-bold">
+        Crusade Event
+      </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="hover:text-blue-300">Home</a>
+        <a href="#" class="hover:text-blue-300">About</a>
+        <a href="#" class="hover:text-blue-300">Livestream</a>
+        <a href="#" class="hover:text-blue-300">Location</a>
+        <a href="#" class="hover:text-blue-300">Join Us</a>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button class="text-white focus:outline-none" id="mobile-menu-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden" id="mobile-menu">
+      <nav class="flex flex-col items-start p-4 space-y-4">
+        <a href="#" class="hover:text-blue-300">Home</a>
+        <a href="#" class="hover:text-blue-300">About</a>
+        <a href="#" class="hover:text-blue-300">Livestream</a>
+        <a href="#" class="hover:text-blue-300">Location</a>
+        <a href="#" class="hover:text-blue-300">Join Us</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Container for Seats -->
+ 
+  <div id="seat-container" class="grid grid-cols-6 gap-4 max-w-2xl mx-auto my-10 p-5 bg-white shadow-lg">
+    
+    
+  </div>
+
+  <!-- First Modal (Confirmation Modal) -->
+  <div id="seatModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg">
+      <h2 class="text-xl font-bold mb-4" id="seatNumber">PH 27</h2>
+      <p>Are you sure you want to reserve this seat?</p>
+      <button class="bg-green-500 px-4 py-2 rounded text-white mt-4" onclick="openBookingModal()">Book</button>
+      <button class="bg-red-500 px-4 py-2 rounded text-white mt-4 ml-2" onclick="closeModal('seatModal')">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Second Modal (Booking Form Modal) -->
+  <div id="bookingModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg">
+      <h2 class="text-xl font-bold mb-4">Reserve Your Seat</h2>
+      <form id="bookingForm" method="POST" action="reserve.php">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Seat Number</label>
+          <input type="text" id="seat" name="seat" class="mt-1 p-2 border w-full" readonly>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" class="mt-1 p-2 border w-full" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" class="mt-1 p-2 border w-full" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Date & Time</label>
+          <input type="datetime-local" name="time" class="mt-1 p-2 border w-full" required>
+        </div>
+        <button type="submit" class="bg-green-500 px-4 py-2 rounded text-white">Confirm Seat Reservation</button>
+        <button type="button" class="bg-red-500 px-4 py-2 rounded text-white ml-2" onclick="closeModal('bookingModal')">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                   <div class="single-footer-caption mb-50">
+                     <div class="single-footer-caption mb-30">
+                         <div class="footer-tittle">
+                             <h4>About Us</h4>
+                             <div class="footer-pera">
+                                 <p>Watchman Catholic Charismatic Renewal Movement is a place where God has placed His name, His Spirit and power.</p>
+                            </div>
+                         </div>
+                     </div>
+                   </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li>
+                                    <p>Address :16B Elechi Beach Mile 1 Diobu, Port Harcourt.</p>
+                                </li>
+                                <li><a href="#">Phone : +234 803 775 7122</a></li>
+                                <li><a href="#">Email : watchmanmediaph@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Important Link</h4>
+                            <ul>
+                                <li><a href="./share-testimony/share-testimony.html"> Share Your Testimony</a></li>
+                                <li><a href="./prayer-request/prayer-request.html">Submit A Prayer Reques</a></li>
+                                <li><a href="#">Sermons</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Newsletter</h4>
+                            <div class="footer-pera footer-pera2">
+                             <p>subscribe to our Bi-weekly Newsletter to Stay Updated.</p>
+                         </div>
+                         <!-- Form -->
+                         <div class="footer-form" >
+                             <div id="mc_embed_signup">
+                                 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                 method="get" class="subscribe_form relative mail_part">
+                                     <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                     class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                     onblur="this.placeholder = ' Email Address '">
+                                     <div class="form-icon">
+                                         <button type="submit" name="submit" id="newsletter-submit"
+                                         class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                     </div>
+                                     <div class="mt-10 info"></div>
+                                 </form>
+                             </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+    <!-- footer-bottom area -->
+    <div class="footer-bottom-area footer-bg">
+        <div class="container">
+            <div class="footer-border">
+                 <div class="row d-flex justify-content-between align-items-center">
+                     <div class="col-xl-10 col-lg-8 ">
+                         <div class="footer-copy-right">
+                             <p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | wccrmphmedia </a>
+</p>
+                         </div>
+                     </div>
+                     <div class="col-xl-2 col-lg-4">
+                         <div class="footer-social f-right">
+                            <a href="https://www.youtube.com/@watchmanportharcourt"><i class="fab fa-youtube"></i></a>
+                            <a href="https://web.facebook.com/watchmanportharcourt/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/wccrmph/"><i class="fas fa-globe"></i></a>
+                            
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+</footer>
+  <script>
+    // Generate seats dynamically from 5DRC 01 to 5DRC 50
+    const seatContainer = document.getElementById('seat-container');
+
+    for (let i = 1; i <= 102; i++) {
+      let seatNumber = `5DRC ${i.toString().padStart(2, '0')}`;
+      let seatElement = `<div class="seat bg-green-500 rounded-full w-10 h-10 cursor-pointer hover:bg-green-700" onclick="openSeatModal('${seatNumber}')"></div>`;
+      seatContainer.innerHTML += seatElement;
+    }
+
+    function openSeatModal(seatNumber) {
+      document.getElementById('seat').value = seatNumber;
+      document.getElementById('seatNumber').innerText = seatNumber;
+      document.getElementById('seatModal').classList.remove('hidden');
+    }
+
+    function openBookingModal() {
+      document.getElementById('seatModal').classList.add('hidden');
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+  </script>
+  <script>
+    // Toggle mobile menu
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
