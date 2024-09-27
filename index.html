@@ -38,6 +38,8 @@
     }
     </script>
 
+    
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1335ZFW1S"></script>
 <script>
@@ -214,7 +216,7 @@
 
 
     <!--SEO-->
-    <style>
+    <!--<style>
         /* Modal container */
         .modal {
             display: none; /* Hidden by default */
@@ -320,7 +322,7 @@
         .btn:hover {
             background-color: #0056b3;
         }
-    </style>
+    </style>-->
 
 	<!-- CSS here -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -515,6 +517,8 @@
     <!-- About Law End-->
     <!--? Brand Area Start -->
     <br>
+
+    
     <section class="team-area pt-180 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.png">
         <div class="container">
             <div class="row">
@@ -618,6 +622,94 @@
      
     
  <!--SEATS-->
+
+  <!-- Page Heading and Description -->
+  <div class="text-center mt-10">
+    <h1 class="text-3xl font-bold">Crusade Seat Reservation</h1>
+    <p class="text-lg text-gray-600 mt-4">Select your preferred seat below and complete the reservation process.</p>
+  </div>
+
+  <!-- Seat Layout (10 columns, 200 seats) -->
+  <div class="grid grid-cols-10 gap-4 max-w-4xl mx-auto my-10 p-5 bg-white shadow-lg">
+    <!-- Dynamically generate 200 seats with seat numbers in format 5DRC 01 -->
+    <script>
+      let seatsContainer = '';
+      for (let i = 1; i <= 200; i++) {
+        let seatNumber = `5DRC ${i.toString().padStart(2, '0')}`; // Format seat number as 5DRC 01, 5DRC 02, etc.
+        seatsContainer += `<div class="seat bg-green-500 rounded-full w-10 h-10 cursor-pointer hover:bg-green-700" onclick="openSeatModal('${seatNumber}')"></div>`;
+      }
+      document.write(seatsContainer);
+    </script>
+  </div>
+
+  <!-- First Modal (Confirmation Modal) -->
+  <div id="seatModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg">
+      <h2 class="text-xl font-bold mb-4" id="seatNumber">Seat Number: </h2> <!-- Placeholder for seat number -->
+      <p>Are you sure you want to reserve this seat?</p>
+      <button class="bg-green-500 px-4 py-2 rounded text-white mt-4" onclick="openBookingModal()">Book</button>
+      <button class="bg-red-500 px-4 py-2 rounded text-white mt-4 ml-2" onclick="closeModal('seatModal')">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Second Modal (Booking Form Modal) -->
+  <div id="bookingModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg">
+      <h2 class="text-xl font-bold mb-4">Reserve Your Seat</h2>
+      <form id="bookingForm" method="POST" action="reserve.php">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Seat Number</label>
+          <input type="text" id="seat" name="seat" class="mt-1 p-2 border w-full" readonly>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" class="mt-1 p-2 border w-full" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" class="mt-1 p-2 border w-full" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Date & Time</label>
+          <input type="datetime-local" name="time" class="mt-1 p-2 border w-full" required>
+        </div>
+        <!-- Hotel Reservation Option -->
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Do you need hotel reservation?</label>
+          <div class="flex items-center space-x-4">
+            <label class="inline-flex items-center">
+              <input type="radio" name="hotel" value="yes" class="form-radio text-indigo-600" required>
+              <span class="ml-2">Yes</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="radio" name="hotel" value="no" class="form-radio text-indigo-600" required>
+              <span class="ml-2">No</span>
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="bg-green-500 px-4 py-2 rounded text-white">Confirm Seat Reservation</button>
+        <button type="button" class="bg-red-500 px-4 py-2 rounded text-white ml-2" onclick="closeModal('bookingModal')">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal Functionality -->
+  <script>
+    function openSeatModal(seatNumber) {
+      document.getElementById('seatNumber').textContent = `Seat Number: ${seatNumber}`; // Update seat number in confirmation modal
+      document.getElementById('seat').value = seatNumber; // Pass seat number to the form input
+      document.getElementById('seatModal').classList.remove('hidden'); // Show confirmation modal
+    }
+
+    function openBookingModal() {
+      document.getElementById('seatModal').classList.add('hidden'); // Hide confirmation modal
+      document.getElementById('bookingModal').classList.remove('hidden'); // Show booking form modal
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden'); // Hide the specified modal
+    }
+  </script>
 
   <!--SEATS-->
  
@@ -860,7 +952,7 @@
 
     <!--POPUP MODAL-->
     
-    <script>
+   <!-- <script>
         // Show the modal after 7 seconds
         window.onload = function() {
             setTimeout(function() {
@@ -880,7 +972,7 @@
                 modal.style.display = 'none';
             }
         }
-    </script>
+    </script>-->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS here -->
@@ -916,11 +1008,6 @@
             },
         });
     </script>
-
-  <!--sears-->
-
-  <!--seats-->
-         
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
