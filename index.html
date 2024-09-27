@@ -457,7 +457,7 @@
         </div>
 
  <!-- Slide 3 --> 
-<div class="swiper-slide relative">
+<!--<div class="swiper-slide relative">
     <video id="slide3Video" autoplay playsinline class="w-full h-full object-cover">
         <source src="assets/vid/hero1.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -479,7 +479,7 @@
         const swiper = document.querySelector('.swiper-container').swiper;
         swiper.slideTo(0);  // Swiper method to go back to the first slide
     });
-</script>
+</script>-->
 
 
       
@@ -628,9 +628,8 @@
     <h1 class="text-3xl font-bold">Crusade Seat Reservation</h1>
     <p class="text-lg text-gray-600 mt-4">Select your preferred seat below and complete the reservation process.</p>
   </div>
-
-  <!-- Seat Layout (10 columns, 200 seats) -->
-  <div class="grid grid-cols-10 gap-4 max-w-4xl mx-auto my-10 p-5 bg-white shadow-lg">
+<!-- Seat Layout (Responsive Grid with 10 columns on larger screens, 5 columns on medium screens, and 3 columns on small screens) -->
+<div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-4 max-w-4xl mx-auto my-10 p-5 bg-white shadow-lg">
     <!-- Dynamically generate 200 seats with seat numbers in format 5DRC 01 -->
     <script>
       let seatsContainer = '';
@@ -640,7 +639,9 @@
       }
       document.write(seatsContainer);
     </script>
-  </div>
+</div>
+
+
 
   <!-- First Modal (Confirmation Modal) -->
   <div id="seatModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
