@@ -1,9 +1,9 @@
 <?php
 // Database connection
-$host = 'localhost';
-$dbname = 'crusade_reservations';
-$username = 'root'; // Replace with your DB username
-$password = '';     // Replace with your DB password
+$host = 'sdb-77.hosting.stackcp.net';
+$dbname = 'seatreservation-35303735bd00';
+$username = 'seatreservation-35303735bd00'; // Replace with your DB username
+$password = '5xiydmkxcn';     // Replace with your DB password
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
